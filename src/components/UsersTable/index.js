@@ -2,24 +2,31 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { Table } from 'react-bootstrap'
 import axios from 'axios';
 import { format } from 'date-fns';
+import {ShowMoreButton, ShowMoreButtonText} from './styles'
 import { url } from '../../service/api/index';
 import { concatUserName, searchValues } from '../../service/utils/usersUtils';
 import UserModal from '../UserModal';
 import UserInput from '../UserInput';
 import TablePagination from '../TablePagination';
+import { tableColors } from '../../service/styles/colors';
 
 function UsersTable() {
   const [user, setUser] = useState([]);
   const [show, setShow] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   const [modalData, setModalData] = useState([]);
+  const [visible, setVisible] = useState(50);
 
   const handleClose = () => setShow(false);
 
   const showPatient = useCallback((patient) => {
     setModalData(patient);
     setShow(true);
-  }, [])
+  }, []);
+
+  const showMoreOnClick = () => {
+    setVisible(prevState => prevState + 10)
+  }
 
   const columns = [
     {
@@ -54,7 +61,7 @@ function UsersTable() {
   return (
     <>
       <UserInput onChange={(e) => setSearchValue(e.target.value)} searchValue={searchValue} />
-      <Table striped bordered hover variant="dark" size="sm" responsive>
+      <Table striped bordered hover variant="dark" size="sm" responsive >
         <thead>
           {columns.map((column, index) => (
             <tr key={index}>
@@ -70,7 +77,7 @@ function UsersTable() {
           ))}
         </thead>
         <tbody>
-          {searchValues(user, searchValue).map((_user, index) => (
+          {searchValues(user, searchValue).splice(0,visible).map((_user, index) => (
             <>
               <tr key={index} onClick={() => showPatient(_user)} >
                 <td >{_user._id}</td>
@@ -89,15 +96,20 @@ function UsersTable() {
               handleClose={handleClose}
               show={show}
               email={modalData.email}
+              name={modalData.name?.first}
               location={modalData.location?.city}
               dob={modalData.dob?.age}
               gender={modalData.gender}
               phone={modalData.phone}
               nat={modalData.nat}
-              image={modalData.picture?.medium}
+              image={modalData.picture?.large}
+              key={modalData._id}
             />)}
         </tbody>
       </Table>
+      <ShowMoreButton color={tableColors.burntSienna} onClick={showMoreOnClick}>
+        <ShowMoreButtonText color={tableColors.charcoal}>Show More</ShowMoreButtonText>
+      </ShowMoreButton>
       <TablePagination />
     </>
   );

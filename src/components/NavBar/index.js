@@ -1,13 +1,14 @@
 import React from 'react';
-import { Navbar, Container } from 'react-bootstrap'
+import { tableColors } from '../../service/styles/colors';
+import { NavBarText, NavBarImage, NavBarcontainer } from './styles';
+import Profile from '../../images/profile.png'
 
 function NavBar() {
   return (
-    <Navbar bg="light">
-      <Container>
-        <Navbar.Brand>Fullstack Form Project</Navbar.Brand>
-      </Container>
-    </Navbar>
+    <NavBarcontainer color={tableColors.burntSienna}>
+      <NavBarText color={tableColors.sandyBrown}>Fullstack Form Project</NavBarText>
+      <NavBarImage src={Profile} />
+    </NavBarcontainer>
   )
 }
 
