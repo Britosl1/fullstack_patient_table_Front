@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test renders correctly 1`] = `
+<input
+  className="form-control"
+  onChange={[MockFunction]}
+  placeholder="Value"
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
+  type="text"
+  value="Teste"
+/>
+`;

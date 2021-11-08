@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test renders correctly 1`] = `
+<nav
+  className="sc-bdvvtL dcNLmR"
+  color="#E76F51"
+>
+  <h1
+    className="sc-gsDKAQ cRtoSf"
+    color="#F4A261"
+  >
+    Fullstack Form Project
+  </h1>
+  <img
+    className="sc-dkPtRN bVjsqg"
+    src="profile.png"
+  />
+</nav>
+`;
+
+exports[`renders correctly 1`] = `
+<nav
+  className="sc-bdvvtL dcNLmR"
+  color="#E76F51"
+>
+  <h1
+    className="sc-gsDKAQ cRtoSf"
+    color="#F4A261"
+  >
+    Fullstack Form Project
+  </h1>
+  <img
+    className="sc-dkPtRN bVjsqg"
+    src="profile.png"
+  />
+</nav>
+`;

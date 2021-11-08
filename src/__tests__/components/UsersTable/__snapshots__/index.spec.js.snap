@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test renders correctly 1`] = `
+Array [
+  <input
+    className="form-control"
+    onChange={[Function]}
+    placeholder="Search for user name or nationality..."
+    style={
+      Object {
+        "marginBottom": "20px",
+      }
+    }
+    type="text"
+    value=""
+  />,
+  <div
+    className="table-responsive"
+  >
+    <table
+      className="table table-dark table-sm table-striped table-bordered table-hover"
+    >
+      <thead>
+        <tr>
+          <th>
+            Id
+          </th>
+          <th>
+            Full Name
+          </th>
+          <th>
+            Email
+          </th>
+          <th>
+            location
+          </th>
+          <th>
+            Birth
+          </th>
+          <th>
+            Gender
+          </th>
+          <th>
+            Phone
+          </th>
+          <th>
+            Nationality
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>,
+  <button
+    className="sc-bdvvtL hKWsCN"
+    color="#E76F51"
+    onClick={[Function]}
+  >
+    <p
+      className="sc-gsDKAQ hFCgdL"
+      color="#264653"
+    >
+      Show More
+    </p>
+  </button>,
+  <div>
+    <ul
+      className="pagination"
+    >
+      <li
+        className="page-item active"
+      >
+        <span
+          className="page-link"
+          disabled={false}
+        >
+          1
+          <span
+            className="visually-hidden"
+          >
+            (current)
+          </span>
+        </span>
+      </li>
+      <li
+        className="page-item"
+      >
+        <a
+          className="page-link"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          2
+        </a>
+      </li>
+      <li
+        className="page-item"
+      >
+        <a
+          className="page-link"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          3
+        </a>
+      </li>
+      <li
+        className="page-item"
+      >
+        <a
+          className="page-link"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          4
+        </a>
+      </li>
+      <li
+        className="page-item"
+      >
+        <a
+          className="page-link"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          5
+        </a>
+      </li>
+    </ul>
+    <br />
+  </div>,
+]
+`;
